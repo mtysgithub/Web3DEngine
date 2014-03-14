@@ -1,0 +1,39 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<title>WebEngine</title>
+	<link rel="stylesheet" type="text/css" href="ext-4.1.1a/resources/css/ext-all.css" />
+	<script type="text/javascript" src="ext-4.1.1a/bootstrap.js" ></script>
+	<script type="text/javascript" src="ext-4.1.1a/locale/ext-lang-zh_CN.js" ></script>
+	<script type="text/javascript" src="WebEngine_Js/ext/ExtCore.js"></script>
+	<script type="text/javascript" src="WebEngine_Js/ext/ExtMainPanelObject.js"></script>
+	<script type="text/javascript" src="WebEngine_Js/ext/ExtAPI.js" ></script>
+	<script type="text/javascript" src="WebEngine_Js/ext/ExtUI.js"></script>
+    <script type="text/javascript" src="WebEngine_Js/ext/ExtPlugin.js"></script>
+
+	<script type="text/javascript" src="Oak3D_v_0_5_9/Oak3D_v_0_5_9_Debug.js"></script>
+	<script type="text/javascript" src="WebEngine_Js/glEngine/EngineCore.js" ></script>
+	<script type="text/javascript" src="WebEngine_Js/glEngine/EngineAPI.js" ></script>
+	<script type="text/javascript" src="WebEngine_Js/glEngine/MainEngineObject.js" ></script>
+	<script type="text/javascript" src="WebEngine_Js/adapter.js"></script>
+	<script type="text/javascript" src="WebEngine_Js/GlobalData.js" ></script>
+	<script type="text/javascript" src="WebEngine_Js/glEngine/EnginePlugin.js"></script>
+    <script type="text/javascript" src="WebEngine_Js/glEngine/EngineExtend.js"></script>
+
+    <script type="text/javascript" src="WebEngine_Js/HashMap.js"></script>
+	<script type="text/javascript">
+		Ext.onReady(
+			function(){
+				var canRender =  okIsSupportWebGL();
+				if(false == canRender){
+					Ext.MessageBox.alert('提示','非常抱歉，您的浏览器不支持WebGL，系统无法进行三维渲染，请尝试更换浏览器');
+					return ;
+				}
+				initApplication();
+			}
+		);
+	</script>
+</head>
+<body></body>
+</html>
+	
